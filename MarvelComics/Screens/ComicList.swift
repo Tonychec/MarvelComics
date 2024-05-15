@@ -25,11 +25,9 @@ struct ComicList<Model>: View where Model: ComicListModelProtocol {
     .listStyle(.plain)
     .scrollContentBackground(.hidden)
     
-    // TODO: need to move in strings
-    .navigationTitle("MARVEL")
+    .navigationTitle(Strings.Comics.listTitle.rawValue)
     .toolbarColorScheme(.dark, for: .navigationBar)
-    // TODO: need to move color manager
-    .toolbarBackground(Color.red, for: .navigationBar)
+    .toolbarBackground(ColorType.mainRed.color, for: .navigationBar) // TODO: need move color to theme
     .toolbarBackground(.visible, for: .navigationBar)
     .navigationDestination(for: Comic.self, destination: { comic in
       ComicDetails(comic: comic)

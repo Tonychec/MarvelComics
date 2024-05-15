@@ -16,6 +16,11 @@
 		E7C9B6072BF5512400C1BA51 /* ComicsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C9B6062BF5512400C1BA51 /* ComicsModel.swift */; };
 		E7C9B60B2BF551B700C1BA51 /* ComicList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C9B60A2BF551B700C1BA51 /* ComicList.swift */; };
 		E7C9B60D2BF5551900C1BA51 /* ComicDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C9B60C2BF5551900C1BA51 /* ComicDetails.swift */; };
+		E7C9B6102BF5572400C1BA51 /* SimpleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C9B60F2BF5572400C1BA51 /* SimpleButton.swift */; };
+		E7C9B6122BF5578E00C1BA51 /* SystemImageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C9B6112BF5578E00C1BA51 /* SystemImageType.swift */; };
+		E7C9B6142BF5585500C1BA51 /* ColorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C9B6132BF5585500C1BA51 /* ColorType.swift */; };
+		E7C9B6162BF558F600C1BA51 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C9B6152BF558F600C1BA51 /* Constants.swift */; };
+		E7C9B6182BF5592500C1BA51 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C9B6172BF5592500C1BA51 /* Strings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,11 @@
 		E7C9B6062BF5512400C1BA51 /* ComicsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsModel.swift; sourceTree = "<group>"; };
 		E7C9B60A2BF551B700C1BA51 /* ComicList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicList.swift; sourceTree = "<group>"; };
 		E7C9B60C2BF5551900C1BA51 /* ComicDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicDetails.swift; sourceTree = "<group>"; };
+		E7C9B60F2BF5572400C1BA51 /* SimpleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleButton.swift; sourceTree = "<group>"; };
+		E7C9B6112BF5578E00C1BA51 /* SystemImageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemImageType.swift; sourceTree = "<group>"; };
+		E7C9B6132BF5585500C1BA51 /* ColorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorType.swift; sourceTree = "<group>"; };
+		E7C9B6152BF558F600C1BA51 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E7C9B6172BF5592500C1BA51 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +109,7 @@
 		E7A4CC072BF549C300246CCB /* MarvelComics */ = {
 			isa = PBXGroup;
 			children = (
+				E7C9B60E2BF5570200C1BA51 /* Screens */,
 				E7C9B6002BF550BB00C1BA51 /* Models */,
 				E7C9B6012BF550C700C1BA51 /* Views */,
 				E7C9B6032BF550D900C1BA51 /* Extensions */,
@@ -139,8 +150,7 @@
 		E7C9B6012BF550C700C1BA51 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				E7C9B60A2BF551B700C1BA51 /* ComicList.swift */,
-				E7C9B60C2BF5551900C1BA51 /* ComicDetails.swift */,
+				E7C9B60F2BF5572400C1BA51 /* SimpleButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -148,6 +158,10 @@
 		E7C9B6022BF550D100C1BA51 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				E7C9B6112BF5578E00C1BA51 /* SystemImageType.swift */,
+				E7C9B6132BF5585500C1BA51 /* ColorType.swift */,
+				E7C9B6152BF558F600C1BA51 /* Constants.swift */,
+				E7C9B6172BF5592500C1BA51 /* Strings.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -157,6 +171,15 @@
 			children = (
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E7C9B60E2BF5570200C1BA51 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				E7C9B60A2BF551B700C1BA51 /* ComicList.swift */,
+				E7C9B60C2BF5551900C1BA51 /* ComicDetails.swift */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,10 +312,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7C9B6052BF5510700C1BA51 /* Comic.swift in Sources */,
+				E7C9B6122BF5578E00C1BA51 /* SystemImageType.swift in Sources */,
+				E7C9B6182BF5592500C1BA51 /* Strings.swift in Sources */,
 				E7A4CC092BF549C300246CCB /* MarvelComicsApp.swift in Sources */,
+				E7C9B6142BF5585500C1BA51 /* ColorType.swift in Sources */,
 				E7C9B6072BF5512400C1BA51 /* ComicsModel.swift in Sources */,
 				E7C9B60B2BF551B700C1BA51 /* ComicList.swift in Sources */,
 				E7C9B60D2BF5551900C1BA51 /* ComicDetails.swift in Sources */,
+				E7C9B6102BF5572400C1BA51 /* SimpleButton.swift in Sources */,
+				E7C9B6162BF558F600C1BA51 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
