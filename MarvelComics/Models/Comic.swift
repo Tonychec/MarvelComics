@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Comic: Identifiable {
+struct Comic: Identifiable, Hashable {
   var id: Int
   var title: String
 }
