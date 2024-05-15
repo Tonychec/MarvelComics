@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct MarvelComicsApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
+  var body: some Scene {
+    WindowGroup {
+      NavigationStack {
+        ComicList<ComicsModel>()
+          .environmentObject(ComicsModel())
+      }
     }
+  }
 }
