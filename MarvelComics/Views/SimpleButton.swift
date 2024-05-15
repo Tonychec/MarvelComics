@@ -10,6 +10,11 @@ import SwiftUI
 typealias Action = () -> Void
 
 struct SimpleButton: View {
+  var font: Font = .largeTitle
+  var dividerColor: Color = .clear
+  var foregroundColor: Color = .clear
+  var backgroundColor: Color = .clear
+  
   var buttonType: ButtonType
   var action: Action
   var padding: CGFloat = 5
@@ -19,41 +24,48 @@ struct SimpleButton: View {
       action()
     } label: {
       ZStack {
-        Color(ColorType.background.color) // TODO: add color from theme
+        Color(backgroundColor)
         
-        switch buttonType {
-          case let .text(text):
-            Text(text)
-            
-          case let .textWithSystemImage(text, image, imagePosition):
-            HStack(spacing: padding) {
-              if imagePosition == .leading || imagePosition == .leadingWithDivider {
-                Image(systemName: image.name)
-              }
-              
-              if imagePosition == .leadingWithDivider {
-                Divider()
-                  .frame(width: 2)
-                  .overlay(ColorType.divider.color) // TODO: add color from theme
-                  .padding(.vertical, padding)
-              }
-              
+        Group {
+          switch buttonType {
+            case let .text(text):
               Text(text)
+                .font(font)
               
-              if imagePosition == .trailing {
-                Image(systemName: image.name)
-              }
+            case let .systemImage(image):
+              Image(systemName: image.name)
               
-              if imagePosition == .leadingWithDivider {
-                Spacer()
+            case let .textWithSystemImage(text, image, imagePosition):
+              HStack(spacing: padding) {
+                switch imagePosition {
+                  case .leadingWithDivider:
+                    Image(systemName: image.name)
+                    Divider()
+                      .frame(width: 2)
+                      .overlay(dividerColor)
+                      .padding(.vertical, padding)
+                    Text(text)
+                      .font(font)
+                    Spacer()
+                    
+                  case .leading:
+                    Image(systemName: image.name)
+                    Text(text)
+                      .font(font)
+                    Spacer()
+                    
+                  case .trailing:
+                    Spacer()
+                    Text(text)
+                      .font(font)
+                    Image(systemName: image.name)
+                }
               }
-            }
-            
-          case let .systemImage(image):
-            Image(systemName: image.name)
+          }
         }
+        .padding(padding)
       }
-      .foregroundColor(ColorType.foreground.color) // TODO: add color from theme
+      .foregroundColor(foregroundColor)
     }
   }
   
@@ -71,9 +83,53 @@ struct SimpleButton: View {
 }
 
 #Preview {
-  SimpleButton(
-    buttonType: .text(Constants.previewLocalizedStringKey),
-    action: { print("Button tapped") }
-  )
-  .frame(width: 350, height: 50)
+  @Environment(\.theme) var theme
+  let localizedKey = Constants.previewLocalizedStringKey
+  
+  return VStack(spacing: 4) {
+    SimpleButton(
+      foregroundColor: theme.foregroundColor,
+      backgroundColor: theme.backgroundColor,
+      buttonType: .systemImage(.xmark),
+      action: { print(".image(_,) pressed") }
+    )
+    .frame(width: 350, height: theme.smallButtonHeight)
+    
+    SimpleButton(
+      font: theme.btnLargeBoldFont,
+      foregroundColor: theme.foregroundColor,
+      backgroundColor: theme.purpulColor,
+      buttonType: .text(localizedKey),
+      action: { print(".text(_) pressed") }
+    )
+    .frame(width: 350, height: theme.largeButtonHeight)
+    
+    SimpleButton(
+      font: theme.btnBoldFont,
+      dividerColor: theme.dividerColor,
+      foregroundColor: theme.foregroundColor,
+      backgroundColor: theme.backgroundColor,
+      buttonType: .textWithSystemImage(localizedKey, .checkmarkFill, .leadingWithDivider),
+      action: { print(".textWithSystemImage(_, _, .leadingWithDivider)pressed") }
+    )
+    .frame(width: 350, height: theme.mediumButtonHeight)
+    
+    SimpleButton(
+      font: theme.btnBoldFont,
+      foregroundColor: theme.foregroundColor,
+      backgroundColor: theme.backgroundColor,
+      buttonType: .textWithSystemImage(localizedKey, .chevronLeft, .leading),
+      action: { print(".textWithSystemImage(_, _, .leading) pressed") }
+    )
+    .frame(width: 350, height: theme.smallButtonHeight)
+    
+    SimpleButton(
+      font: theme.btnBoldFont,
+      foregroundColor: theme.foregroundColor,
+      backgroundColor: theme.backgroundColor,
+      buttonType: .textWithSystemImage(localizedKey, .chevronRight, .trailing),
+      action: { print(".textWithSystemImage(_, _, .trailing) pressed") }
+    )
+    .frame(width: 350, height: theme.smallButtonHeight)
+  }
 }

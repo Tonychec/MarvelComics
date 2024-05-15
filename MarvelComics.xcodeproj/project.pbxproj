@@ -21,6 +21,7 @@
 		E7C9B6142BF5585500C1BA51 /* ColorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C9B6132BF5585500C1BA51 /* ColorType.swift */; };
 		E7C9B6162BF558F600C1BA51 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C9B6152BF558F600C1BA51 /* Constants.swift */; };
 		E7C9B6182BF5592500C1BA51 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C9B6172BF5592500C1BA51 /* Strings.swift */; };
+		E7C9B61A2BF56D5D00C1BA51 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C9B6192BF56D5D00C1BA51 /* Theme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		E7C9B6132BF5585500C1BA51 /* ColorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorType.swift; sourceTree = "<group>"; };
 		E7C9B6152BF558F600C1BA51 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E7C9B6172BF5592500C1BA51 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		E7C9B6192BF56D5D00C1BA51 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,7 @@
 				E7C9B6132BF5585500C1BA51 /* ColorType.swift */,
 				E7C9B6152BF558F600C1BA51 /* Constants.swift */,
 				E7C9B6172BF5592500C1BA51 /* Strings.swift */,
+				E7C9B6192BF56D5D00C1BA51 /* Theme.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 				E7C9B6122BF5578E00C1BA51 /* SystemImageType.swift in Sources */,
 				E7C9B6182BF5592500C1BA51 /* Strings.swift in Sources */,
 				E7A4CC092BF549C300246CCB /* MarvelComicsApp.swift in Sources */,
+				E7C9B61A2BF56D5D00C1BA51 /* Theme.swift in Sources */,
 				E7C9B6142BF5585500C1BA51 /* ColorType.swift in Sources */,
 				E7C9B6072BF5512400C1BA51 /* ComicsModel.swift in Sources */,
 				E7C9B60B2BF551B700C1BA51 /* ComicList.swift in Sources */,
