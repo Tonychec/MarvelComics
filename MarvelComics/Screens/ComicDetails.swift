@@ -9,12 +9,33 @@ import SwiftUI
 
 struct ComicDetails: View {
   @State var comic: Comic
+  @Environment(\.theme) var theme
+  @Environment(\.dismiss) var dismiss
   
   var body: some View {
-    Text(comic.title)
+    ZStack {
+      theme.backgroundColor
+        .ignoresSafeArea(.all)
+      
+      Text(comic.title)
+        .foregroundColor(theme.foregroundColor)
+      
+    }
+    .navigationBarBackButtonHidden(true)
+    .toolbar {
+      ToolbarItem(placement: .navigationBarTrailing) {
+        SimpleButton(
+          foregroundColor: theme.foregroundColor,
+          buttonType: .systemImage(.xmark),
+          action: { dismiss() }
+        )
+      }
+    }
   }
 }
 
 #Preview {
-  ComicDetails(comic: .init(id: 421, title: "Comic title"))
+  NavigationStack {
+    ComicDetails(comic: .init(id: 421, title: "Comic title"))
+  }
 }
