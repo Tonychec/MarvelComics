@@ -71,4 +71,3 @@ struct ComicDetailsHeader: View {
   )
   .frame(height: 200)
 }
-

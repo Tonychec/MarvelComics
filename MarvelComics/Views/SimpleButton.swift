@@ -84,50 +84,35 @@ struct SimpleButton: View {
   @Environment(\.theme) var theme
   let localizedKey = Constants.previewLocalizedStringKey
   
-  return VStack(spacing: 4) {
-    SimpleButton(
-      foregroundColor: theme.foregroundColor,
-      backgroundColor: theme.backgroundColor,
-      buttonType: .systemImage(.xmark),
-      action: { print(".image(_,) pressed") }
-    )
-    .frame(width: 350, height: theme.smallButtonHeight)
-    
-    SimpleButton(
-      font: theme.btnLargeBoldFont,
-      foregroundColor: theme.foregroundColor,
-      backgroundColor: theme.purpulColor,
-      buttonType: .text(localizedKey),
-      action: { print(".text(_) pressed") }
-    )
-    .frame(width: 350, height: theme.largeButtonHeight)
-    
+  func button(
+    type: SimpleButton.ButtonType,
+    backgroundColor: Color = theme.backgroundColor
+  ) -> SimpleButton {
     SimpleButton(
       font: theme.btnBoldFont,
       dividerColor: theme.dividerColor,
       foregroundColor: theme.foregroundColor,
-      backgroundColor: theme.backgroundColor,
-      buttonType: .textWithSystemImage(localizedKey, .checkmarkFill, .leadingWithDivider),
-      action: { print(".textWithSystemImage(_, _, .leadingWithDivider)pressed") }
+      backgroundColor: backgroundColor,
+      buttonType: type,
+      action: { print("Button pressed") }
     )
-    .frame(width: 350, height: theme.mediumButtonHeight)
-    
-    SimpleButton(
-      font: theme.btnBoldFont,
-      foregroundColor: theme.foregroundColor,
-      backgroundColor: theme.backgroundColor,
-      buttonType: .textWithSystemImage(localizedKey, .chevronLeft, .leading),
-      action: { print(".textWithSystemImage(_, _, .leading) pressed") }
-    )
-    .frame(width: 350, height: theme.smallButtonHeight)
-    
-    SimpleButton(
-      font: theme.btnBoldFont,
-      foregroundColor: theme.foregroundColor,
-      backgroundColor: theme.backgroundColor,
-      buttonType: .textWithSystemImage(localizedKey, .chevronRight, .trailing),
-      action: { print(".textWithSystemImage(_, _, .trailing) pressed") }
-    )
-    .frame(width: 350, height: theme.smallButtonHeight)
   }
+  
+  return VStack(spacing: 4) {
+    button(type: .systemImage(.xmark))
+      .frame(height: theme.smallButtonHeight)
+    
+    button(type: .text(localizedKey), backgroundColor: theme.purpulColor)
+      .frame(height: theme.largeButtonHeight)
+    
+    button(type: .textWithSystemImage(localizedKey, .checkmarkFill, .leadingWithDivider))
+      .frame(height: theme.mediumButtonHeight)
+    
+    button(type: .textWithSystemImage(localizedKey, .chevronLeft, .leading))
+      .frame(height: theme.smallButtonHeight)
+    
+    button(type: .textWithSystemImage(localizedKey, .chevronRight, .trailing))
+      .frame(height: theme.smallButtonHeight)
+  }
+  .frame(width: 350)
 }
