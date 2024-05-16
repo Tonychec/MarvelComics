@@ -7,8 +7,16 @@
 
 import Foundation
 
-struct Comic: Identifiable, Hashable {
+struct ComicsData: Codable {
+  var data: ComicsResponse
+}
+
+struct ComicsResponse: Codable {
+  var results: [Comic]
+}
+
+struct Comic: Codable, Identifiable, Hashable {
   var id: Int
   var title: String
-  var description: String
+  var description: String?
 }

@@ -26,6 +26,8 @@ struct ComicList<Model>: View where Model: ComicListModelProtocol {
     .listStyle(.plain)
     .scrollContentBackground(.hidden)
     
+    .task { await model.loadComicsList() }
+    
     .navigationTitle(Strings.Comics.listTitle.rawValue)
     .toolbarColorScheme(.dark, for: .navigationBar)
     .toolbarBackground(theme.mainRedColor, for: .navigationBar)
@@ -39,6 +41,6 @@ struct ComicList<Model>: View where Model: ComicListModelProtocol {
 #Preview {
   NavigationStack {
     ComicList<ComicsModel>()
-      .environmentObject(ComicsModel())
+      .environmentObject(ComicsModel(apiCaller: APICaller(httpClient: HTTPClient.default)))
   }
 }

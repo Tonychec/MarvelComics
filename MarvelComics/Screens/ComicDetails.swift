@@ -48,7 +48,7 @@ struct ComicDetails: View {
             Text(Strings.Comics.descriptionHint.key)
               .foregroundColor(theme.foregroundColor)
             
-            Text(comic.description)
+            Text(comic.description ?? "")
               .foregroundColor(theme.foregroundColor)
             
             Spacer()

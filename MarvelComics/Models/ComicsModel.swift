@@ -10,19 +10,28 @@ import Foundation
 @MainActor
 protocol ComicListModelProtocol: ObservableObject {
   var comics: [Comic] { get set }
+  
+  func loadComicsList() async
 }
 
 @MainActor
 class ComicsModel {
-  @Published var comics: [Comic] = [
-    .init(id: 421, title: "42.1", description: "42.1"),
-    .init(id: 422, title: "42.2", description: "42.1"),
-    .init(id: 423, title: "42.3", description: "42.1"),
-    .init(id: 424, title: "42.4", description: "42.1"),
-    .init(id: 425, title: "42.5", description: "42.1")
-  ]
+  @Published var comics: [Comic] = []
+  
+  var apiCaller: ComicsAPICallerProtocol
+  
+  init(apiCaller: ComicsAPICallerProtocol) {
+    self.apiCaller = apiCaller
+  }
 }
 
 extension ComicsModel: ComicListModelProtocol {
-  
+  func loadComicsList() async {
+    do {
+      comics = try await apiCaller.comicsList()
+    } catch {
+      // TODO: make error handling
+      print("error in loadComicsList", error)
+    }
+  }
 }

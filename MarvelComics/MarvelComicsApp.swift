@@ -13,7 +13,7 @@ struct MarvelComicsApp: App {
     WindowGroup {
       NavigationStack {
         ComicList<ComicsModel>()
-          .environmentObject(ComicsModel())
+          .environmentObject(ComicsModel(apiCaller: APICaller(httpClient: HTTPClient.default)))
       }
     }
   }
