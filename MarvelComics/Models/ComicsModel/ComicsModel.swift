@@ -49,4 +49,28 @@ extension ComicsModel: ComicDetailsModelProtocol {
       }
     }
   }
+  
+  func readNow() {
+    self.error = InternalError.comingSoon
+  }
+  
+  func markAsRead() {
+    self.error = InternalError.comingSoon
+  }
+  
+  func addToLibrary() {
+    self.error = InternalError.comingSoon
+  }
+  
+  func readOffline() {
+    self.error = InternalError.comingSoon
+  }
+  
+  func previous() {
+    self.error = InternalError.comingSoon
+  }
+  
+  func next() {
+    self.error = InternalError.comingSoon
+  }
 }

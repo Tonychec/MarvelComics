@@ -27,23 +27,23 @@ struct ComicList<Model>: View where Model: ComicListModelProtocol {
         NavigationLink(value: comic) {}
           .opacity(0)
       }
-
       .listRowSeparator(.visible, edges: /*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
     }
     .listStyle(.plain)
     .scrollContentBackground(.hidden)
     
     .task { await model.loadComicsList() }
+    .refreshable { await model.loadComicsList() }
     
     .navigationTitle(Strings.Comics.listTitle.rawValue)
     .toolbarColorScheme(.dark, for: .navigationBar)
     .toolbarBackground(theme.mainRedColor, for: .navigationBar)
     .toolbarBackground(.visible, for: .navigationBar)
+    
     .navigationDestination(for: Comic.self, destination: { comic in
       ComicDetails<ComicsModel>(id: comic.id)
         .environmentObject(model)
     })
-    
     .errorAlert(error: $model.error)
   }
 }

@@ -38,6 +38,8 @@
 		E7C9B63A2BF5FD4A00C1BA51 /* Thumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C9B6392BF5FD4A00C1BA51 /* Thumbnail.swift */; };
 		E7C9B63E2BF6012000C1BA51 /* ComicListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C9B63D2BF6012000C1BA51 /* ComicListModel.swift */; };
 		E7C9B6402BF6012A00C1BA51 /* ComicDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C9B63F2BF6012A00C1BA51 /* ComicDetailsModel.swift */; };
+		E7C9B6442BF62A0500C1BA51 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C9B6432BF62A0500C1BA51 /* NetworkError.swift */; };
+		E7C9B6472BF62B2A00C1BA51 /* InternalError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C9B6462BF62B2A00C1BA51 /* InternalError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +96,8 @@
 		E7C9B63B2BF5FDDE00C1BA51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		E7C9B63D2BF6012000C1BA51 /* ComicListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicListModel.swift; sourceTree = "<group>"; };
 		E7C9B63F2BF6012A00C1BA51 /* ComicDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicDetailsModel.swift; sourceTree = "<group>"; };
+		E7C9B6432BF62A0500C1BA51 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		E7C9B6462BF62B2A00C1BA51 /* InternalError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternalError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,9 +181,9 @@
 		E7C9B6002BF550BB00C1BA51 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				E7C9B6042BF5510700C1BA51 /* Comic.swift */,
 				E7C9B63C2BF6011200C1BA51 /* ComicsModel */,
-				E7C9B6352BF5F8E000C1BA51 /* LocalizedAlertError.swift */,
+				E7C9B6452BF62B0F00C1BA51 /* Errors */,
+				E7C9B6042BF5510700C1BA51 /* Comic.swift */,
 				E7C9B6392BF5FD4A00C1BA51 /* Thumbnail.swift */,
 			);
 			path = Models;
@@ -199,6 +203,7 @@
 		E7C9B6022BF550D100C1BA51 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				E7C9B6412BF629EE00C1BA51 /* HTTPClient */,
 				E7C9B6282BF5F34C00C1BA51 /* Api */,
 				E7C9B6252BF5F2CF00C1BA51 /* Theme */,
 				E7C9B6112BF5578E00C1BA51 /* SystemImageType.swift */,
@@ -241,7 +246,6 @@
 		E7C9B6282BF5F34C00C1BA51 /* Api */ = {
 			isa = PBXGroup;
 			children = (
-				E7C9B6292BF5F36100C1BA51 /* HTTPClient.swift */,
 				E7C9B6332BF5F4F600C1BA51 /* APICaller.swift */,
 				E7C9B62B2BF5F37900C1BA51 /* APIs.swift */,
 				E7C9B6312BF5F3FA00C1BA51 /* Keys.plist */,
@@ -257,6 +261,24 @@
 				E7C9B63F2BF6012A00C1BA51 /* ComicDetailsModel.swift */,
 			);
 			path = ComicsModel;
+			sourceTree = "<group>";
+		};
+		E7C9B6412BF629EE00C1BA51 /* HTTPClient */ = {
+			isa = PBXGroup;
+			children = (
+				E7C9B6292BF5F36100C1BA51 /* HTTPClient.swift */,
+				E7C9B6432BF62A0500C1BA51 /* NetworkError.swift */,
+			);
+			path = HTTPClient;
+			sourceTree = "<group>";
+		};
+		E7C9B6452BF62B0F00C1BA51 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				E7C9B6462BF62B2A00C1BA51 /* InternalError.swift */,
+				E7C9B6352BF5F8E000C1BA51 /* LocalizedAlertError.swift */,
+			);
+			path = Errors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -394,7 +416,9 @@
 				E7C9B62A2BF5F36100C1BA51 /* HTTPClient.swift in Sources */,
 				E7C9B6272BF5F2E900C1BA51 /* MainTheme.swift in Sources */,
 				E7C9B6402BF6012A00C1BA51 /* ComicDetailsModel.swift in Sources */,
+				E7C9B6472BF62B2A00C1BA51 /* InternalError.swift in Sources */,
 				E7C9B6182BF5592500C1BA51 /* Strings.swift in Sources */,
+				E7C9B6442BF62A0500C1BA51 /* NetworkError.swift in Sources */,
 				E7C9B6362BF5F8E000C1BA51 /* LocalizedAlertError.swift in Sources */,
 				E7A4CC092BF549C300246CCB /* MarvelComicsApp.swift in Sources */,
 				E7C9B61A2BF56D5D00C1BA51 /* Theme.swift in Sources */,

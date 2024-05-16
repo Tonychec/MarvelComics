@@ -23,4 +23,9 @@ enum Strings: CaseIterable {
       LocalizedStringKey(self.rawValue)
     }
   }
+  
+  enum Errors: String, CaseIterable {
+    case comingSoonTitle = "🚧 Hold onto your capes!" // "errors.comingSoonTitle"
+    case comingSoonDescription = "This feature is in the Batcave getting some final touches. Stay tuned for more superhero action coming soon! 🚀"  // "errors.comingSoonDescription"
+  }
 }

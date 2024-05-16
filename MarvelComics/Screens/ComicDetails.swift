@@ -36,10 +36,10 @@ struct ComicDetails<Model>: View where Model: ComicDetailsModelProtocol {
           VStack(spacing: 20) {
             ComicDetailsHeader(
               imageUrlString: model.selectedComic?.thumbnail?.urlString ?? Constants.previewImageUrl,
-              readNowAction: { print("readNow tapped") },
-              markAsReadAction: { print("markAsRead tapped") },
-              addToLibraryAction: { print("addToLibrary tapped") },
-              readOfflineAction: { print("readOffline tapped") }
+              readNowAction: { model.readNow() },
+              markAsReadAction: { model.markAsRead() },
+              addToLibraryAction: { model.addToLibrary() },
+              readOfflineAction: { model.readOffline() }
             )
             .frame(height: 240)
             
@@ -58,8 +58,8 @@ struct ComicDetails<Model>: View where Model: ComicDetailsModelProtocol {
         
         // TODO: Implement actions
         ComicDetailsFooter(
-          previousAction: { print("previous tapped") },
-          nextAction: { print("next tapped") }
+          previousAction: { model.previous() },
+          nextAction: { model.next() }
         )
         .padding(.bottom, 0)
       }

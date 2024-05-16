@@ -13,4 +13,11 @@ protocol ComicDetailsModelProtocol: ObservableObject {
   var error: Error? { get set }
   
   func loadComicsInfo(id: Int) async
+  
+  func readNow()
+  func markAsRead()
+  func addToLibrary()
+  func readOffline()
+  func previous()
+  func next()
 }
