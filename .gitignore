@@ -54,3 +54,5 @@ playground.xcworkspace
 # https://github.com/johnno1962/injectionforxcode
 
 iOSInjectionProject/
+
+MarvelComics/Utils/Api/Keys.plist
