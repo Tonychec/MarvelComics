@@ -35,6 +35,8 @@ struct ComicList<Model>: View where Model: ComicListModelProtocol {
     .navigationDestination(for: Comic.self, destination: { comic in
       ComicDetails(comic: comic)
     })
+    
+    .errorAlert(error: $model.error)
   }
 }
 

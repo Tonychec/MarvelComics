@@ -10,6 +10,7 @@ import Foundation
 @MainActor
 protocol ComicListModelProtocol: ObservableObject {
   var comics: [Comic] { get set }
+  var error: Error? { get set }
   
   func loadComicsList() async
 }
@@ -17,6 +18,7 @@ protocol ComicListModelProtocol: ObservableObject {
 @MainActor
 class ComicsModel {
   @Published var comics: [Comic] = []
+  @Published var error: Error?
   
   var apiCaller: ComicsAPICallerProtocol
   
@@ -30,8 +32,7 @@ extension ComicsModel: ComicListModelProtocol {
     do {
       comics = try await apiCaller.comicsList()
     } catch {
-      // TODO: make error handling
-      print("error in loadComicsList", error)
+      self.error = error
     }
   }
 }

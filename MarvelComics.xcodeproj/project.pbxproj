@@ -33,6 +33,8 @@
 		E7C9B6302BF5F3DA00C1BA51 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C9B62F2BF5F3DA00C1BA51 /* Date+Extensions.swift */; };
 		E7C9B6322BF5F3FA00C1BA51 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = E7C9B6312BF5F3FA00C1BA51 /* Keys.plist */; };
 		E7C9B6342BF5F4F600C1BA51 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C9B6332BF5F4F600C1BA51 /* APICaller.swift */; };
+		E7C9B6362BF5F8E000C1BA51 /* LocalizedAlertError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C9B6352BF5F8E000C1BA51 /* LocalizedAlertError.swift */; };
+		E7C9B6382BF5F90300C1BA51 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C9B6372BF5F90300C1BA51 /* View+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +85,8 @@
 		E7C9B62F2BF5F3DA00C1BA51 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		E7C9B6312BF5F3FA00C1BA51 /* Keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
 		E7C9B6332BF5F4F600C1BA51 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
+		E7C9B6352BF5F8E000C1BA51 /* LocalizedAlertError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedAlertError.swift; sourceTree = "<group>"; };
+		E7C9B6372BF5F90300C1BA51 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +171,7 @@
 			children = (
 				E7C9B6042BF5510700C1BA51 /* Comic.swift */,
 				E7C9B6062BF5512400C1BA51 /* ComicsModel.swift */,
+				E7C9B6352BF5F8E000C1BA51 /* LocalizedAlertError.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -200,6 +205,7 @@
 			children = (
 				E7C9B62D2BF5F3A200C1BA51 /* String+Extensions.swift */,
 				E7C9B62F2BF5F3DA00C1BA51 /* Date+Extensions.swift */,
+				E7C9B6372BF5F90300C1BA51 /* View+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -369,8 +375,10 @@
 				E7C9B62A2BF5F36100C1BA51 /* HTTPClient.swift in Sources */,
 				E7C9B6272BF5F2E900C1BA51 /* MainTheme.swift in Sources */,
 				E7C9B6182BF5592500C1BA51 /* Strings.swift in Sources */,
+				E7C9B6362BF5F8E000C1BA51 /* LocalizedAlertError.swift in Sources */,
 				E7A4CC092BF549C300246CCB /* MarvelComicsApp.swift in Sources */,
 				E7C9B61A2BF56D5D00C1BA51 /* Theme.swift in Sources */,
+				E7C9B6382BF5F90300C1BA51 /* View+Extensions.swift in Sources */,
 				E7C9B6142BF5585500C1BA51 /* ColorType.swift in Sources */,
 				E7C9B6072BF5512400C1BA51 /* ComicsModel.swift in Sources */,
 				E7C9B60B2BF551B700C1BA51 /* ComicList.swift in Sources */,
