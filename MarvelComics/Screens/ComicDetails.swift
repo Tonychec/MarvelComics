@@ -31,7 +31,6 @@ struct ComicDetails<Model>: View where Model: ComicDetailsModelProtocol {
           .frame(width: theme.smallButtonHeight, height: theme.smallButtonHeight)
         }
         
-        // TODO: Implement actions
         ScrollView {
           VStack(spacing: 20) {
             ComicDetailsHeader(
@@ -43,20 +42,28 @@ struct ComicDetails<Model>: View where Model: ComicDetailsModelProtocol {
             )
             .frame(height: 240)
             
-            Text(model.selectedComic?.title ?? Constants.redactedTitle)
-              .foregroundColor(theme.foregroundColor)
-            
-            Text(Strings.Comics.descriptionHint.key)
-              .foregroundColor(theme.foregroundColor)
-            
-            Text(model.selectedComic?.description ?? Constants.redactedDescription)
-              .foregroundColor(theme.foregroundColor)
-            
+            Group {
+              Text(model.selectedComic?.title ?? Constants.redactedTitle)
+                .font(theme.titleFont)
+              
+              Divider()
+                .frame(height: 2)
+                .overlay(theme.dividerColor)
+              
+              Text(Strings.Comics.descriptionHint.key)
+                .font(theme.textBoldFont)
+              
+              Text(model.selectedComic?.description ?? Constants.redactedDescription)
+                .font(theme.textFont)
+            }
+            .foregroundColor(theme.foregroundColor)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .padding(.leading, 10)
+
             Spacer()
           }
         }
         
-        // TODO: Implement actions
         ComicDetailsFooter(
           previousAction: { model.previous() },
           nextAction: { model.next() }

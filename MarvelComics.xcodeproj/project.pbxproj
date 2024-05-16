@@ -181,10 +181,9 @@
 		E7C9B6002BF550BB00C1BA51 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E7C9B6482BF6408F00C1BA51 /* Network */,
 				E7C9B63C2BF6011200C1BA51 /* ComicsModel */,
 				E7C9B6452BF62B0F00C1BA51 /* Errors */,
-				E7C9B6042BF5510700C1BA51 /* Comic.swift */,
-				E7C9B6392BF5FD4A00C1BA51 /* Thumbnail.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -279,6 +278,15 @@
 				E7C9B6352BF5F8E000C1BA51 /* LocalizedAlertError.swift */,
 			);
 			path = Errors;
+			sourceTree = "<group>";
+		};
+		E7C9B6482BF6408F00C1BA51 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				E7C9B6042BF5510700C1BA51 /* Comic.swift */,
+				E7C9B6392BF5FD4A00C1BA51 /* Thumbnail.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

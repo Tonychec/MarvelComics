@@ -23,7 +23,7 @@ class ComicsModel {
 extension ComicsModel: ComicListModelProtocol {
   func loadComicsList() async {
     // TODO: REMOVE Simulate a delay for check redacted
-    await Task.sleep(2_000_000_000) // 1 second
+    try? await Task.sleep(nanoseconds: 1_000_000_000) // 1 second
     
     do {
       comics = try await apiCaller.comicsList()
@@ -36,7 +36,7 @@ extension ComicsModel: ComicListModelProtocol {
 extension ComicsModel: ComicDetailsModelProtocol {
   func loadComicsInfo(id: Int) async {
     // TODO: REMOVE Simulate a delay for check redacted
-    await Task.sleep(2_000_000_000) // 1 second
+    try? await Task.sleep(nanoseconds: 1_000_000_000) // 1 second
     
     if let comic = comics.filter({ $0.id == id }).first {
       selectedComic = comic
