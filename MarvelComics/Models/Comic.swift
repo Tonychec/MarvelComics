@@ -19,4 +19,5 @@ struct Comic: Codable, Identifiable, Hashable {
   var id: Int
   var title: String
   var description: String?
+  var thumbnail: Thumbnail?
 }

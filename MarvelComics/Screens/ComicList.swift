@@ -15,6 +15,13 @@ struct ComicList<Model>: View where Model: ComicListModelProtocol {
     List(model.comics) { comic in
       HStack {
         Text(comic.title)
+        
+        if let urlString = comic.thumbnail?.urlString {
+          Spacer()
+          
+          ImageLoaderView(urlString: urlString)
+            .frame(width: 80, height: 80)
+        }
       }
       .overlay {
         NavigationLink(value: comic) {}

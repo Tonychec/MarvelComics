@@ -35,6 +35,7 @@
 		E7C9B6342BF5F4F600C1BA51 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C9B6332BF5F4F600C1BA51 /* APICaller.swift */; };
 		E7C9B6362BF5F8E000C1BA51 /* LocalizedAlertError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C9B6352BF5F8E000C1BA51 /* LocalizedAlertError.swift */; };
 		E7C9B6382BF5F90300C1BA51 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C9B6372BF5F90300C1BA51 /* View+Extensions.swift */; };
+		E7C9B63A2BF5FD4A00C1BA51 /* Thumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C9B6392BF5FD4A00C1BA51 /* Thumbnail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,8 @@
 		E7C9B6332BF5F4F600C1BA51 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		E7C9B6352BF5F8E000C1BA51 /* LocalizedAlertError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedAlertError.swift; sourceTree = "<group>"; };
 		E7C9B6372BF5F90300C1BA51 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
+		E7C9B6392BF5FD4A00C1BA51 /* Thumbnail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thumbnail.swift; sourceTree = "<group>"; };
+		E7C9B63B2BF5FDDE00C1BA51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +140,7 @@
 		E7A4CC072BF549C300246CCB /* MarvelComics */ = {
 			isa = PBXGroup;
 			children = (
+				E7C9B63B2BF5FDDE00C1BA51 /* Info.plist */,
 				E7C9B6002BF550BB00C1BA51 /* Models */,
 				E7C9B60E2BF5570200C1BA51 /* Screens */,
 				E7C9B6012BF550C700C1BA51 /* Views */,
@@ -172,6 +176,7 @@
 				E7C9B6042BF5510700C1BA51 /* Comic.swift */,
 				E7C9B6062BF5512400C1BA51 /* ComicsModel.swift */,
 				E7C9B6352BF5F8E000C1BA51 /* LocalizedAlertError.swift */,
+				E7C9B6392BF5FD4A00C1BA51 /* Thumbnail.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -384,6 +389,7 @@
 				E7C9B60B2BF551B700C1BA51 /* ComicList.swift in Sources */,
 				E7C9B6342BF5F4F600C1BA51 /* APICaller.swift in Sources */,
 				E7C9B6242BF5860000C1BA51 /* ComicDetailsHeader.swift in Sources */,
+				E7C9B63A2BF5FD4A00C1BA51 /* Thumbnail.swift in Sources */,
 				E7C9B61E2BF57AFC00C1BA51 /* Typealiases.swift in Sources */,
 				E7C9B6222BF585DC00C1BA51 /* ComicDetailsFooter.swift in Sources */,
 				E7C9B6302BF5F3DA00C1BA51 /* Date+Extensions.swift in Sources */,
@@ -556,6 +562,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MarvelComics/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -594,6 +601,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MarvelComics/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
