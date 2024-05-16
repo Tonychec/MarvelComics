@@ -18,6 +18,8 @@ struct ComicsResponse: Codable {
 struct Comic: Codable, Identifiable, Hashable {
   var id: Int
   var title: String
+  
+  // TODO: Need to figure out which field to show since the description from the request comes empty
   var description: String?
   var thumbnail: Thumbnail?
 }

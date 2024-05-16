@@ -40,6 +40,7 @@
 		E7C9B6402BF6012A00C1BA51 /* ComicDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C9B63F2BF6012A00C1BA51 /* ComicDetailsModel.swift */; };
 		E7C9B6442BF62A0500C1BA51 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C9B6432BF62A0500C1BA51 /* NetworkError.swift */; };
 		E7C9B6472BF62B2A00C1BA51 /* InternalError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C9B6462BF62B2A00C1BA51 /* InternalError.swift */; };
+		E7C9B64A2BF6484A00C1BA51 /* Collection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C9B6492BF6484A00C1BA51 /* Collection+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +99,7 @@
 		E7C9B63F2BF6012A00C1BA51 /* ComicDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicDetailsModel.swift; sourceTree = "<group>"; };
 		E7C9B6432BF62A0500C1BA51 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		E7C9B6462BF62B2A00C1BA51 /* InternalError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternalError.swift; sourceTree = "<group>"; };
+		E7C9B6492BF6484A00C1BA51 /* Collection+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +221,7 @@
 				E7C9B62D2BF5F3A200C1BA51 /* String+Extensions.swift */,
 				E7C9B62F2BF5F3DA00C1BA51 /* Date+Extensions.swift */,
 				E7C9B6372BF5F90300C1BA51 /* View+Extensions.swift */,
+				E7C9B6492BF6484A00C1BA51 /* Collection+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -423,6 +426,7 @@
 				E7C9B6122BF5578E00C1BA51 /* SystemImageType.swift in Sources */,
 				E7C9B62A2BF5F36100C1BA51 /* HTTPClient.swift in Sources */,
 				E7C9B6272BF5F2E900C1BA51 /* MainTheme.swift in Sources */,
+				E7C9B64A2BF6484A00C1BA51 /* Collection+Extensions.swift in Sources */,
 				E7C9B6402BF6012A00C1BA51 /* ComicDetailsModel.swift in Sources */,
 				E7C9B6472BF62B2A00C1BA51 /* InternalError.swift in Sources */,
 				E7C9B6182BF5592500C1BA51 /* Strings.swift in Sources */,

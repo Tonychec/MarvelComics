@@ -34,7 +34,7 @@ struct ComicDetails<Model>: View where Model: ComicDetailsModelProtocol {
         ScrollView {
           VStack(spacing: 20) {
             ComicDetailsHeader(
-              imageUrlString: model.selectedComic?.thumbnail?.urlString ?? Constants.previewImageUrl,
+              imageUrlString: .constant(model.selectedComic?.thumbnail?.urlString ?? Constants.previewImageUrl),
               readNowAction: { model.readNow() },
               markAsReadAction: { model.markAsRead() },
               addToLibraryAction: { model.addToLibrary() },

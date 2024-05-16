@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ComicDetailsHeader: View {
-  @State var imageUrlString: String
+  @Binding var imageUrlString: String
   
   var readNowAction: Action
   var markAsReadAction: Action
@@ -19,12 +19,12 @@ struct ComicDetailsHeader: View {
   
   var body: some View {
     ZStack {
-      ImageLoaderView(urlString: imageUrlString, blurRadius: 15)
+      ImageLoaderView(urlString: $imageUrlString, blurRadius: 15)
         .frame(height: 240)
         .clipped()
       
       HStack {
-        ImageLoaderView(urlString: imageUrlString)
+        ImageLoaderView(urlString: $imageUrlString)
           .frame(width: 148, height: 220)
           .clipped()
         
@@ -63,7 +63,7 @@ struct ComicDetailsHeader: View {
 
 #Preview {
   ComicDetailsHeader(
-    imageUrlString: Constants.previewImageUrl,
+    imageUrlString: .constant(Constants.previewImageUrl),
     readNowAction: { print("readNow button tapped") },
     markAsReadAction: { print("markAsRead button tapped") },
     addToLibraryAction: { print("addToLibrary button tapped") },

@@ -19,7 +19,7 @@ struct ComicList<Model>: View where Model: ComicListModelProtocol {
         if let urlString = comic.thumbnail?.urlString {
           Spacer()
           
-          ImageLoaderView(urlString: urlString)
+          ImageLoaderView(urlString: .constant(urlString))
             .frame(width: 80, height: 80)
         }
       }
