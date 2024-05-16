@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ImageLoaderView: View {
-  var urlString: String
+  @State var urlString: String
   var blurRadius: CGFloat = 0
   
   var body: some View {

@@ -12,4 +12,10 @@ enum Constants {
   static var previewLocalizedStringKey: LocalizedStringKey = "Button"
   static var previewImageUrl: String = "https://cdn.marvel.com/content/1x/legomarvelavengerscodered_lob_crd_01.jpg"
   static var unknownErrorDescription: String = "Unknown Error"
+  static var redactedTitle: String { randomString(length: 15) }
+  static var redactedDescription: String { randomString(length: 300) }
+  
+  private static func randomString(length: Int) -> String {
+    String((0..<length).map{ _ in "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789".randomElement()! })
+  }
 }

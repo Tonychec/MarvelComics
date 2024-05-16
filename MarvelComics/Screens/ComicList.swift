@@ -40,7 +40,8 @@ struct ComicList<Model>: View where Model: ComicListModelProtocol {
     .toolbarBackground(theme.mainRedColor, for: .navigationBar)
     .toolbarBackground(.visible, for: .navigationBar)
     .navigationDestination(for: Comic.self, destination: { comic in
-      ComicDetails(comic: comic)
+      ComicDetails<ComicsModel>(id: comic.id)
+        .environmentObject(model)
     })
     
     .errorAlert(error: $model.error)

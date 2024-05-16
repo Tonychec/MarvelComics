@@ -7,11 +7,12 @@
 
 import SwiftUI
 
-struct ComicDetails: View {
-  @State var comic: Comic
-  
+struct ComicDetails<Model>: View where Model: ComicDetailsModelProtocol {
+  @EnvironmentObject var model: Model
   @Environment(\.theme) var theme
   @Environment(\.dismiss) var dismiss
+  
+  var id: Int
   
   var body: some View {
     ZStack {
@@ -34,7 +35,7 @@ struct ComicDetails: View {
         ScrollView {
           VStack(spacing: 20) {
             ComicDetailsHeader(
-              imageUrlString: Constants.previewImageUrl,
+              imageUrlString: model.selectedComic?.thumbnail?.urlString ?? Constants.previewImageUrl,
               readNowAction: { print("readNow tapped") },
               markAsReadAction: { print("markAsRead tapped") },
               addToLibraryAction: { print("addToLibrary tapped") },
@@ -42,13 +43,13 @@ struct ComicDetails: View {
             )
             .frame(height: 240)
             
-            Text(comic.title)
+            Text(model.selectedComic?.title ?? Constants.redactedTitle)
               .foregroundColor(theme.foregroundColor)
             
             Text(Strings.Comics.descriptionHint.key)
               .foregroundColor(theme.foregroundColor)
             
-            Text(comic.description ?? "")
+            Text(model.selectedComic?.description ?? Constants.redactedDescription)
               .foregroundColor(theme.foregroundColor)
             
             Spacer()
@@ -63,18 +64,15 @@ struct ComicDetails: View {
         .padding(.bottom, 0)
       }
     }
+    .task { await model.loadComicsInfo(id: id) }
+    .redacted(reason: model.selectedComic == nil ? .placeholder : .invalidated)
     .navigationBarHidden(true)
   }
 }
 
 #Preview {
   NavigationStack {
-    ComicDetails(
-      comic: .init(
-        id: 421,
-        title: "Comic title",
-        description: "Comic description"
-      )
-    )
+    ComicDetails<ComicsModel>(id: 82965)
+      .environmentObject(ComicsModel(apiCaller: APICaller(httpClient: HTTPClient.default)))
   }
 }
