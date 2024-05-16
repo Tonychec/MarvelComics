@@ -50,11 +50,13 @@ struct ComicDetails<Model>: View where Model: ComicDetailsModelProtocol {
                 .frame(height: 2)
                 .overlay(theme.dividerColor)
               
-              Text(Strings.Comics.descriptionHint.key)
+              Text(NSLocalizedString("The Story", comment: "comics.descriptionHint"))
                 .font(theme.textBoldFont)
               
-              Text(model.selectedComic?.description ?? Constants.redactedDescription)
-                .font(theme.textFont)
+              if let description = model.selectedComic?.description {
+                Text(description)
+                  .font(theme.textFont)
+              }
             }
             .foregroundColor(theme.foregroundColor)
             .frame(maxWidth: .infinity, alignment: .leading)

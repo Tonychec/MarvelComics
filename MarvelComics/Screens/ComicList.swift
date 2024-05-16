@@ -35,7 +35,7 @@ struct ComicList<Model>: View where Model: ComicListModelProtocol {
     .task { await model.loadComicsList() }
     .refreshable { await model.loadComicsList() }
     
-    .navigationTitle(Strings.Comics.listTitle.rawValue)
+    .navigationTitle(NSLocalizedString("MARVEL", comment: "comics.listTitle"))
     .toolbarColorScheme(.dark, for: .navigationBar)
     .toolbarBackground(theme.mainRedColor, for: .navigationBar)
     .toolbarBackground(.visible, for: .navigationBar)

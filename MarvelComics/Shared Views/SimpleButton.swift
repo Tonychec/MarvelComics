@@ -68,8 +68,8 @@ struct SimpleButton: View {
   }
   
   enum ButtonType {
-    case text(LocalizedStringKey)
-    case textWithSystemImage(LocalizedStringKey, SystemImageType, ImagePositionType)
+    case text(String)
+    case textWithSystemImage(String, SystemImageType, ImagePositionType)
     case systemImage(SystemImageType)
   }
   
@@ -82,7 +82,7 @@ struct SimpleButton: View {
 
 #Preview {
   @Environment(\.theme) var theme
-  let localizedKey = Constants.previewLocalizedStringKey
+  let title = Constants.previewButtonTitle
   
   func button(
     type: SimpleButton.ButtonType,
@@ -102,16 +102,16 @@ struct SimpleButton: View {
     button(type: .systemImage(.xmark))
       .frame(height: theme.smallButtonHeight)
     
-    button(type: .text(localizedKey), backgroundColor: theme.purpulColor)
+    button(type: .text(title), backgroundColor: theme.purpulColor)
       .frame(height: theme.largeButtonHeight)
     
-    button(type: .textWithSystemImage(localizedKey, .checkmarkFill, .leadingWithDivider))
+    button(type: .textWithSystemImage(title, .checkmarkFill, .leadingWithDivider))
       .frame(height: theme.mediumButtonHeight)
     
-    button(type: .textWithSystemImage(localizedKey, .chevronLeft, .leading))
+    button(type: .textWithSystemImage(title, .chevronLeft, .leading))
       .frame(height: theme.smallButtonHeight)
     
-    button(type: .textWithSystemImage(localizedKey, .chevronRight, .trailing))
+    button(type: .textWithSystemImage(title, .chevronRight, .trailing))
       .frame(height: theme.smallButtonHeight)
   }
   .frame(width: 350)

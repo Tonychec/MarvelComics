@@ -15,14 +15,14 @@ extension InternalError: LocalizedError {
   var errorDescription: String? {
     switch self {
       case .comingSoon:
-        return NSLocalizedString(Strings.Errors.comingSoonTitle.rawValue, comment: "comingSoon")
+        return NSLocalizedString("🚧 Hold onto your capes!", comment: "errors.comingSoonTitle")
     }
   }
   
   var recoverySuggestion: String? {
     switch self {
       case .comingSoon:
-        return Strings.Errors.comingSoonDescription.rawValue
+        return NSLocalizedString("This feature is in the Batcave getting some final touches. Stay tuned for more superhero action coming soon! 🚀", comment: "errors.comingSoonDescription")
     }
   }
 }

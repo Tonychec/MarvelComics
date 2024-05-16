@@ -14,6 +14,8 @@ enum ColorType: String, CaseIterable {
   case divider
   case mainRed
   
+//  case testFailColorType // For XCTest validation, see testColorsExistInAssetCatalog in MarvelComicsAssetsTests
+  
   var name: String {
     self.rawValue
   }

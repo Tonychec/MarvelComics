@@ -1,0 +1,62 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "🚧 Hold onto your capes!" : {
+      "comment" : "errors.comingSoonTitle"
+    },
+    "ADD TO LIBRARY" : {
+      "comment" : "comics.addToLibrary"
+    },
+    "Bad request" : {
+      "comment" : "httpError"
+    },
+    "Button" : {
+      "comment" : "preview.buttonTitle"
+    },
+    "Invalid response" : {
+      "comment" : "invalidResponse"
+    },
+    "MARK AS READ" : {
+      "comment" : "comics.markAsRead"
+    },
+    "MARVEL" : {
+      "comment" : "comics.listTitle"
+    },
+    "NEXT" : {
+      "comment" : "comics.next"
+    },
+    "PREVIOUS" : {
+      "comment" : "comics.previous"
+    },
+    "READ NOW" : {
+      "comment" : "comics.readNow"
+    },
+    "READ OFFLINE" : {
+      "comment" : "comics.readOffline"
+    },
+    "The Story" : {
+      "comment" : "comics.descriptionHint"
+    },
+    "This feature is in the Batcave getting some final touches. Stay tuned for more superhero action coming soon! 🚀" : {
+      "comment" : "errors.comingSoonDescription",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This feature is in the Batcave getting some final touches. Stay tuned for more superhero action coming soon! 🚀"
+          }
+        }
+      }
+    },
+    "Unable to decode successfully" : {
+      "comment" : "decodingError"
+    },
+    "Unable to perform request" : {
+      "comment" : "badRequestError"
+    },
+    "Unknown Error" : {
+      "comment" : "unknownError.description"
+    }
+  },
+  "version" : "1.0"
+}

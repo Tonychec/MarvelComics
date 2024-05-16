@@ -32,16 +32,24 @@ struct ComicDetailsHeader: View {
           SimpleButton(
             foregroundColor: theme.foregroundColor,
             backgroundColor: theme.purpulColor,
-            buttonType: .text(Strings.Comics.readNow.key),
+            buttonType: .text(NSLocalizedString("READ NOW", comment: "comics.readNow")),
             action: readNowAction
           )
           .frame(height: theme.largeButtonHeight)
           
-          buttonWithImage(title: .markAsRead, image: .checkmarkFill, action: markAsReadAction)
+          buttonWithImage(title: NSLocalizedString("MARK AS READ", comment: "comics.markAsRead"),
+                          image: .checkmarkFill,
+                          action: markAsReadAction)
             .frame(height: theme.smallButtonHeight)
-          buttonWithImage(title: .addToLibrary, image: .plus, action: addToLibraryAction)
+          
+          buttonWithImage(title: NSLocalizedString("ADD TO LIBRARY", comment: "comics.addToLibrary"),
+                          image: .plus,
+                          action: addToLibraryAction)
             .frame(height: theme.smallButtonHeight)
-          buttonWithImage(title: .readOffline, image: .arrowDown, action: readOfflineAction)
+          
+          buttonWithImage(title: NSLocalizedString("READ OFFLINE", comment: "comics.readOffline"),
+                          image: .arrowDown,
+                          action: readOfflineAction)
             .frame(height: theme.smallButtonHeight)
         }
       }
@@ -49,13 +57,13 @@ struct ComicDetailsHeader: View {
     }
   }
   
-  func buttonWithImage(title: Strings.Comics, image: SystemImageType, action: @escaping Action) -> SimpleButton {
+  func buttonWithImage(title: String, image: SystemImageType, action: @escaping Action) -> SimpleButton {
     SimpleButton(
       font: theme.btnBoldFont,
       dividerColor: theme.dividerColor,
       foregroundColor: theme.foregroundColor,
       backgroundColor: theme.backgroundColor,
-      buttonType: .textWithSystemImage(title.key, image, .leadingWithDivider),
+      buttonType: .textWithSystemImage(title, image, .leadingWithDivider),
       action: action
     )
   }

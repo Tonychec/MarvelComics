@@ -15,15 +15,22 @@ struct ComicDetailsFooter: View {
   
   var body: some View {
     HStack(spacing: 0) {
-      button(title: .previous, image: .chevronLeft, imagePosition: .leading, action: previousAction)
+      button(title: NSLocalizedString("PREVIOUS", comment: "comics.previous"),
+             image: .chevronLeft,
+             imagePosition: .leading,
+             action: previousAction)
         .frame(height: theme.smallButtonHeight)
-      button(title: .next, image: .chevronRight, imagePosition: .trailing, action: nextAction)
+      
+      button(title: NSLocalizedString("NEXT", comment: "comics.next"),
+             image: .chevronRight,
+             imagePosition: .trailing,
+             action: nextAction)
         .frame(height: theme.smallButtonHeight)
     }
   }
   
   func button(
-    title: Strings.Comics,
+    title: String,
     image: SystemImageType,
     imagePosition: SimpleButton.ImagePositionType,
     action: @escaping Action) -> SimpleButton {
@@ -33,7 +40,7 @@ struct ComicDetailsFooter: View {
       dividerColor: theme.dividerColor,
       foregroundColor: theme.foregroundColor,
       backgroundColor: theme.backgroundColor,
-      buttonType: .textWithSystemImage(title.key, image, imagePosition),
+      buttonType: .textWithSystemImage(title, image, imagePosition),
       padding: 10,
       action: action
     )

@@ -12,7 +12,7 @@ protocol ComicListModelProtocol: ObservableObject {
   var comics: [Comic] { get set }
   var error: Error? { get set }
   
-  // TODO: Need to add pagination
+  // TODO: Need to add pagination, redacted, and empty list hint
   func loadComicsList() async
 }
 

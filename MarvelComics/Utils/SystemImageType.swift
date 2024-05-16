@@ -16,6 +16,8 @@ enum SystemImageType: String, CaseIterable {
   case chevronLeft = "chevron.left"
   case chevronRight = "chevron.right"
   
+//  case testFailSystemImageType // For XCTest validation, see testUsedSystemImages in MarvelComicsAssetsTests
+  
   var name: String {
     self.rawValue
   }
