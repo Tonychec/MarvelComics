@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-typealias Action = () -> Void
-
 struct SimpleButton: View {
   var font: Font = .largeTitle
   var dividerColor: Color = .clear
@@ -16,8 +14,8 @@ struct SimpleButton: View {
   var backgroundColor: Color = .clear
   
   var buttonType: ButtonType
-  var action: Action
   var padding: CGFloat = 5
+  var action: Action
   
   var body: some View {
     Button {

@@ -10,4 +10,5 @@ import Foundation
 struct Comic: Identifiable, Hashable {
   var id: Int
   var title: String
+  var description: String
 }

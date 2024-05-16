@@ -12,7 +12,7 @@ enum SystemImageType: String, CaseIterable {
   case checkmarkFill = "checkmark.circle.fill"
   case checkmark = "checkmark.circle"
   case plus = "plus.circle.fill"
-  case arrow = "arrow.down.to.line"
+  case arrowDown = "arrow.down.to.line"
   case chevronLeft = "chevron.left"
   case chevronRight = "chevron.right"
   
