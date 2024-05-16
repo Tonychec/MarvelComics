@@ -14,3 +14,16 @@ protocol ComicListModelProtocol: ObservableObject {
   
   func loadComicsList() async
 }
+
+extension ComicsModel: ComicListModelProtocol {
+  func loadComicsList() async {
+    // TODO: REMOVE Simulate a delay for check redacted
+    try? await Task.sleep(nanoseconds: 1_000_000_000) // 1 second
+    
+    do {
+      comics = try await apiCaller.comicsList()
+    } catch {
+      self.error = error
+    }
+  }
+}
