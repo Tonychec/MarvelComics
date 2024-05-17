@@ -29,7 +29,7 @@ struct ComicList<Model>: View where Model: ComicListModelProtocol {
       }
       .listRowSeparator(.visible, edges: /*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
     }
-//    .accessibilityIdentifier("ComicList")
+    .accessibilityIdentifier("ComicList")
     
     .listStyle(.plain)
     .scrollContentBackground(.hidden)
