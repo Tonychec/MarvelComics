@@ -8,8 +8,7 @@ This application is built to explore and interact with the Marvel Comics API ava
 To run the application, you need to provide your private and public keys from the Marvel API. These keys should be added to the `Keys.plist` file.
 
 1. Sign up at [developer.marvel.com](https://developer.marvel.com) and get your API keys.
-2. Create a file named `Keys.plist` in the `/MarvelComics/Utils/Api/` directory.
-3. Add your Marvel API keys to the `Keys.plist` file in the following format:
+2. Add your Marvel API keys to the `Keys.plist` file in the following format:
 
 ```plist
 <?xml version="1.0" encoding="UTF-8"?>
