@@ -12,6 +12,7 @@ enum NetworkError: Error {
   case decodingError(Error)
   case invalidResponse
   case httpError(Int, String)
+  case apiKeysMissing
 }
 
 extension NetworkError: LocalizedError {
@@ -25,6 +26,8 @@ extension NetworkError: LocalizedError {
         return NSLocalizedString("Invalid response", comment: "invalidResponse")
       case .httpError(_ , _):
         return NSLocalizedString("Bad request", comment: "httpError")
+      case .apiKeysMissing:
+        return NSLocalizedString("Api keys is missing", comment: "apiKeysMissing")
     }
   }
   
@@ -32,6 +35,8 @@ extension NetworkError: LocalizedError {
     switch self {
       case let .httpError(_ , description):
         return description
+      case .apiKeysMissing:
+        return NSLocalizedString("Please add the privateKey and publicKey from developer.marvel.com into the Keys.plist file.", comment: "recoverySuggestion.apiKeysMissing")
       default:
         return nil
     }

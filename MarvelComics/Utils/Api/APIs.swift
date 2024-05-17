@@ -32,7 +32,9 @@ enum APIs {
     guard let path = Bundle.main.path(forResource: "Keys", ofType: "plist"),
           let keys = NSDictionary(contentsOfFile: path),
           let publicKey = keys[AuthItemKeys.publicKey.rawValue] as? String,
-          let privateKey = keys[AuthItemKeys.privateKey.rawValue] as? String else { return [] }
+          !publicKey.isEmpty,
+          let privateKey = keys[AuthItemKeys.privateKey.rawValue] as? String,
+          !privateKey.isEmpty else { return [] }
 
     let timestamp = String(Date().getTimeIntervalSince1970())
     let hash = String(timestamp + privateKey + publicKey).md5()

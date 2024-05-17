@@ -272,7 +272,6 @@
 			isa = PBXGroup;
 			children = (
 				E7C9B6292BF5F36100C1BA51 /* HTTPClient.swift */,
-				E7C9B6432BF62A0500C1BA51 /* NetworkError.swift */,
 			);
 			path = HTTPClient;
 			sourceTree = "<group>";
@@ -282,6 +281,7 @@
 			children = (
 				E7C9B6462BF62B2A00C1BA51 /* InternalError.swift */,
 				E7C9B6352BF5F8E000C1BA51 /* LocalizedAlertError.swift */,
+				E7C9B6432BF62A0500C1BA51 /* NetworkError.swift */,
 			);
 			path = Errors;
 			sourceTree = "<group>";

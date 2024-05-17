@@ -10,6 +10,10 @@ import XCTest
 @testable import MarvelComics
 
 final class MarvelComicsAssetsTests: XCTestCase {
+  func testAuthItemsExist() {
+    XCTAssertFalse(APIs.authItems.isEmpty, "privateKey and/or publicKey from developer.marvel.com is missing in Keys.plist file")
+  }
+  
   func testColorsExistInAssetCatalog() {
     for type in ColorType.allCases {
       let color = UIColor(named: type.name)

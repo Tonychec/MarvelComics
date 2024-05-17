@@ -7,6 +7,9 @@
     "ADD TO LIBRARY" : {
       "comment" : "comics.addToLibrary"
     },
+    "Api keys is missing" : {
+      "comment" : "apiKeysMissing"
+    },
     "Bad request" : {
       "comment" : "httpError"
     },
@@ -24,6 +27,9 @@
     },
     "NEXT" : {
       "comment" : "comics.next"
+    },
+    "Please add the privateKey and publicKey from developer.marvel.com into the Keys.plist file." : {
+      "comment" : "recoverySuggestion.apiKeysMissing"
     },
     "PREVIOUS" : {
       "comment" : "comics.previous"
