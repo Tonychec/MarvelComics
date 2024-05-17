@@ -20,7 +20,7 @@ final class MarvelComicsAssetsTests: XCTestCase {
       XCTAssertNotNil(color, "Asset catalog is missing an entry for \(type.name)")
     }
   }
-
+  
   func testUsedSystemImages() {
     for type in SystemImageType.allCases {
       let image = UIImage(systemName: type.name)

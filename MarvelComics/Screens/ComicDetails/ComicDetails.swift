@@ -73,6 +73,7 @@ struct ComicDetails<Model>: View where Model: ComicDetailsModelProtocol {
         .padding(.bottom, 0)
       }
     }
+//    .accessibilityIdentifier("ComicDetails")
     .task { await model.loadComicsInfo(id: id) }
     .redacted(reason: model.selectedComic == nil ? .placeholder : .invalidated)
     .navigationBarHidden(true)
