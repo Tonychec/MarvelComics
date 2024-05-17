@@ -27,18 +27,17 @@ protocol ComicDetailsModelProtocol: ObservableObject {
 }
 
 extension ComicsModel: ComicDetailsModelProtocol {
+  // TODO: need to update for server logic and work with pagination
   var hasPrevious: Bool {
     comics.first?.id == selectedComic?.id
   }
   
+  // TODO: need to update for server logic and work with pagination
   var hasNext: Bool {
     comics.last?.id == selectedComic?.id
   }
   
   func loadComicsInfo(id: Int) async {
-    // TODO: REMOVE Simulate a delay for check redacted
-    try? await Task.sleep(nanoseconds: 1_000_000_000) // 1 second
-    
     if let comic = comics.filter({ $0.id == id }).first {
       selectedComic = comic
     } else {
