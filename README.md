@@ -1,5 +1,6 @@
-
 # Marvel Comics Application
+<img src="https://github.com/Tonychec/MarvelComics/assets/15349089/db5d77bd-8962-4e7a-9b0c-fccf5abf82f5" width="200">
+<img src="https://github.com/Tonychec/MarvelComics/assets/15349089/9398c273-5798-4f9b-81bb-ae95a61183a1" width="200">
 
 This application is built to explore and interact with the Marvel Comics API available at [developer.marvel.com](https://developer.marvel.com). It is designed with the Model-View (MV) architecture pattern in mind, ensuring that the View only receives state updates from the Model when necessary. The application is implemented without additional libraries or dependencies.
 
