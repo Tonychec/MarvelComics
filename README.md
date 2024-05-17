@@ -37,14 +37,15 @@ To run the application, you need to provide your private and public keys from th
 - **Pull to Refresh Issue**: The pull to refresh indicator becomes clear when navigating back from ComicDetails to ComicList.
 
 ### Improvements
-- **Empty Description**: The Comic entity from the API sometimes has an empty description. This needs investigation or a design update.
+- **Empty Description**: The Comic entity from the API has an empty description. This needs investigation or a design update.
 - **Thumbnail Performance**: Implement changeable image sizes in the Thumbnail component for better performance.
 - **State Machine**: Consider implementing a state machine for better management of view states.
 - **Pagination**: Add pagination support to the ComicList.
 - **Loading State**: Implement a loading state for the ComicList.
 - **Empty List State**: Implement an empty list state for the ComicList.
+- **Previuos and Next buttons state**: Implement update buttons state depending on hasPrevious and hasNext values from model.
 - **Read Functions**: Implement `readNow`, `markAsRead`, `addToLibrary`, and `readOffline` functionalities once the business logic is clarified.
-- **Search Functionality**: Add a search feature to filter comics.
+- **Search Functionality**: Add a search and filter feature.
 - **Caching**: Implement caching for offline access and performance improvements.
 - **Test Coverage**: Increase the test coverage to ensure reliability.
 
